@@ -1,0 +1,27 @@
+<%layout('pages/boilerplate') %>
+
+<div class="row mt-5">
+    <div class="col-8 offset-2  " >
+        <h1 class="offset-2">Signup on Wanderlust</h1>
+        <form action="/signup" method="post" class="needs-validation" novalidate>
+            <div>
+                <label for="username" class="form-label">username</label>
+                <input type="text" class="form-control form-label"  name="username" placeholder=" username" required>
+                <div class="valid-feedback">
+                 Title Looks good!
+                </div>
+            </div>
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control form-label"  name="email" placeholder=" username" required>
+                
+            </div>
+            <div>
+                <label for="password" class="form-label">password</label>
+                <input type="password" class="form-control form-label"  name="password" placeholder=" password" required>
+                
+            </div>
+            <button class="btn btn-success">submit</button>
+        </form>
+    </div>
+</div>

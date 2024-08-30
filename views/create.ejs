@@ -1,0 +1,65 @@
+ 
+<!-- novalidate to user this code for shod the valadation error  // novalasate == bootstrap method-->
+ <%layout('pages/boilerplate') %>
+<body>
+
+  <h3>Create New Listing</h3>
+  <form method="post" action="/listing" novalidate class="needs-validation">
+    <div class="row">
+      <div class="col-8">
+    <div>
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control form-label"  name="listing[title]" placeholder=" enter title" required>
+        <div class="valid-feedback">
+         Title Looks good!
+        </div>
+    </div>
+    <br><br>
+    <div>
+       <label for="discription" class="form-label">Discription</label>
+       <textarea name="listing[description]" class="form-control form-label"  required></textarea>
+       <div class="invalid-feedback">
+       Please enter short discription.
+      </div>
+    </div>
+    <div>
+       <label for="image" class="form-label">Image Link</label>
+       <input type="text" name="listing[image.url]" placeholder="Enter URL/link"   class="form-control form-label">
+    </div>
+    <div class="row ">
+      <div class="col-md-4">
+    <div>
+      <label for="price" class="form-label">Price</label> 
+      <input name="listing[price]" placeholder="enter price"  class="form-control form-label"  required>
+      <div class="invalid-feedback">
+        price shoud be valid.
+      </div>
+    </div>
+  </div>
+    <div class="col-md-8">
+    <div>
+       <label for="location" class="form-label">Location</label> 
+       <input type="text" name="listing[location]" placeholder="enter location" class="form-control form-label"  required>
+       <div class="invalid-feedback">
+        Please choose your location.
+      </div>
+    </div>
+  </div>
+  </div> 
+    <div>
+       <label for="country" class="form-label">Country</label> 
+       <input type="text" name="listing[country]"  placeholder="enter country" class="form-control form-label" required>
+       <div class="invalid-feedback">
+        Please select your country.
+      </div>
+    </div>
+  </div>
+  </div>
+  <br><br>
+       <button class="btn btn-dark add-btn">Add listing</button>
+    
+  </form>
+  
+  
+</body> 
+

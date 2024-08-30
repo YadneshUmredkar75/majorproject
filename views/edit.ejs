@@ -1,0 +1,52 @@
+<% layout('pages/boilerplate') %>
+<body>
+    <h3>Edit Listing</h3>
+    <form method="post" action="/listing/<%= listlist._id%>?_method=put" novalidate class="needs-validation">
+      <div class="row">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" value="/listing<%= listlist.title %>" class="form-control" required>
+        <div class="valid-feedback">
+          Title Looks good!
+         </div>
+      </div>
+      <div class="mb-3">
+        <label for="discription" class="form-label">Discription</label>
+        <textarea name="listing[description]" class="form-control" required  ><%= listlist.description %></textarea>
+        <div class="invalid-feedback">
+          Please enter short discription.
+         </div>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input type="text" name="listing[image.url]" class="form-control"   value="<%= listlist.image.url %> ">
+       </div>
+       <div class="row">
+       <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" name="listing[price]" class="form-control" required  value="<%= listlist.price %>">
+        <div class="invalid-feedback">
+          Enter a price.
+        </div>
+        </div>
+        <div class="mb-3 col-md-8">
+          <label for="location" class="form-label">Location</label>
+        <input type="text" name="listing[location]" class="form-control" required  value="<%= listlist.location %>">
+        <div class="invalid-feedback">
+          Please choose your location.
+        </div>
+        </div>
+      </div>
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+        <input type="text" name="listing[country]"  class="form-control" required value="<%= listlist.country %>">
+        <div class="invalid-feedback">
+          Please select your country.
+        </div>
+        </div>
+      </div>
+        <br><br>
+      <button class=" btn btn-dark edit-btn">Edit</button>
+
+    </form>
+</body>
